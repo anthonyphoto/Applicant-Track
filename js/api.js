@@ -1,10 +1,10 @@
 'use strict';
 
-
+const URL = 'https://applicant-track.herokuapp.com';
 
 // Sign up new user
 function postSignup(usr) {
-  fetch('/api/users', {
+  fetch(URL + '/api/users', {
     headers: {
       'Content-Type': 'application/json'
     },
@@ -34,7 +34,7 @@ function postSignup(usr) {
 
 // Login and get JWT 
 function postLogin(usr) {
-  fetch('/api/auth/login', {
+  fetch(URL + '/api/auth/login', {
     headers: {
       'Content-Type': 'application/json'
     },
@@ -65,7 +65,7 @@ function postLogin(usr) {
 function postRefresh() {
   const authToken = localStorage.getItem('authToken');
   // console.log(1, authToken);
-  fetch('/api/auth/refresh', {
+  fetch(URL + '/api/auth/refresh', {
     headers: {
       'Content-Type': 'application/json',
       Authorization: `Bearer ${authToken}`
@@ -89,7 +89,7 @@ function postRefresh() {
 function postResume(resume) {
   const authToken = localStorage.getItem('authToken');
   console.log(1, authToken);
-  fetch('/resumes', {
+  fetch(URL + '/resumes', {
     headers: {
       'Content-Type': 'application/json',
       Authorization: `Bearer ${authToken}`
@@ -122,7 +122,7 @@ function postResume(resume) {
 // Modify a resume (owner access)
 function putResume(resume, id) {
   const authToken = localStorage.getItem('authToken');
-  fetch('/resumes/' + id, {
+  fetch(URL + '/resumes/' + id, {
     headers: {
       'Content-Type': 'application/json',
       Authorization: `Bearer ${authToken}`
@@ -154,7 +154,7 @@ function putResume(resume, id) {
 
 // returns array of all resumes (all access)
 function getResumes() {
-    fetch('/resumes')
+    fetch(URL + '/resumes')
       .then(response => {
         // console.log("get /resumes", response);
         if (response.ok) return response.json();
@@ -172,8 +172,8 @@ function getResumes() {
 
 /* parameter: username */
 function getResumeByUser(username) {
-const authToken = localStorage.getItem('authToken');
-fetch('/resumes/user/' + username, {
+  const authToken = localStorage.getItem('authToken');
+  fetch(URL + '/resumes/user/' + username, {
       headers: {
         'Content-Type': 'application/json',
         Authorization: `Bearer ${authToken}`
@@ -199,7 +199,7 @@ fetch('/resumes/user/' + username, {
 function getResume(id) {
   const authToken = localStorage.getItem('authToken');
   return new Promise(resolve => {
-    fetch('/resumes/' + id, {
+    fetch(URL + '/resumes/' + id, {
       headers: {
         'Content-Type': 'application/json',
         Authorization: `Bearer ${authToken}`
@@ -223,7 +223,7 @@ function getResume(id) {
 // Delete resume (owner access)
 function deleteResume(id){
   const authToken = localStorage.getItem('authToken');
-  fetch('/resumes/' + id, {
+  fetch(URL + '/resumes/' + id, {
     headers: {
       'Content-Type': 'application/json',
       Authorization: `Bearer ${authToken}`
@@ -250,7 +250,7 @@ function deleteResume(id){
 // Change the status (Only admin)
 function putStatus(id, status) {
   const authToken = localStorage.getItem('authToken');
-  fetch('/resumes/status/' + id, {
+  fetch(URL + '/resumes/status/' + id, {
     headers: {
       'Content-Type': 'application/json',
       Authorization: `Bearer ${authToken}`
