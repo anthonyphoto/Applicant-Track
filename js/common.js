@@ -114,7 +114,7 @@ function handleLogoutLink() {
     renderLogStatus();
     $('#js-list').removeClass('hidden');
     // $(window).scrollTop(0); 
-    window.location.href = '../index.html';
+    window.location.href = './index.html';
   });
 }
 
@@ -127,7 +127,7 @@ function handleResumeSubmitLink(){
       return;
     }
     /* reset the form */
-    window.location.href = '../post.html';
+    window.location.href = './post.html';
     // initPostHtml();
     // renderPostResumePage();
   });
@@ -262,7 +262,7 @@ function handleDetailLink(){
   $('ul#js-ul').on('click', 'a', function(event) {
     event.preventDefault();
     const id = $(this).attr('id');
-    window.location.href = `../detail.html?id=${id}`;
+    window.location.href = `./detail.html?id=${id}`;
     moveResumeById(id); 
   });
 }
@@ -270,7 +270,7 @@ function handleDetailLink(){
 function handleBackToList(){
   $('#js-detail').on('click', '#js-go-list', function(event){
     event.preventDefault();
-    window.location.href = '../index.html';
+    window.location.href = './index.html';
     // window.history.back();
     $(window).scrollTop( $("main").offset().top );  
 //    renderPrevList();
@@ -330,7 +330,7 @@ function handleUpdateSubmit(){
 function handleAllListClick(){
   $('#js-list').on('click', '#js-all-list-link', function(event){
     event.preventDefault();
-    window.location.href = '../index.html';
+    window.location.href = './index.html';
   });
 }
 
@@ -340,7 +340,7 @@ function handleUserListClick(){
 
       const usr = getAuthInfo();
     if (usr) {
-        window.location.href = '../userlist.html';
+        window.location.href = './userlist.html';
     //   getResumeByUser(usr.username); // List resume list in landing page
     }
     else {

@@ -121,7 +121,7 @@ function renderList(resumes, filter = 'all') {
 }
 
 function renderPrevList(){
-window.location.href = `../index.html`;  
+window.location.href = `./index.html`;  
   window.history.back();
   // const usr = getAuthInfo();
   //   if ($('#js-list').attr('value') === 'user' && usr) {
@@ -246,7 +246,7 @@ function renderDetail(resume) {
             Created on: ${customDate(new Date(resume.created))[0]}</br>
             Last updated on : ${customDate(new Date(resume.updated))[0]}</br></br>
             <div class='inp-full'>
-            <img src='../img/${resume.status}.png' alt='Status: ${resume.status}' class='img_w'>
+            <img src='./img/${resume.status}.png' alt='Status: ${resume.status}' class='img_w'>
             </div>
         </div>
             <div class='clr'></div>

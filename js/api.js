@@ -51,7 +51,7 @@ function postLogin(usr) {
     localStorage.setItem('authToken', data.authToken);
     $('#js-login').addClass('hidden');
     
-    window.location.href = '../userlist.html';
+    window.location.href = './userlist.html';
     // renderLogStatus();
     // getResumeByUser(usr.username);
   })
@@ -108,7 +108,7 @@ function postResume(resume) {
       message: `Your resume is succefully submitted.`,
       color: 'green'
     }
-    window.location.href = `../detail.html?id=${data._id}`;
+    window.location.href = `./detail.html?id=${data._id}`;
     // renderMessage(msg);
     // $('form#js-new-submit').trigger('reset');
     moveResumeById(data._id);
