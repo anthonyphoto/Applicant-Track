@@ -1,6 +1,8 @@
-## Applicant-Tracker
+## Applicant-Tracker (jQuery Client Repo)
 
-### Demo Link https://anthonyphoto.github.io/Applicant-Track/
+<!-- ### Demo Link https://anthonyphoto.github.io/Applicant-Track/ -->
+
+This app is implemented again using React.  Please go to React Repo - https://github.com/anthonyphoto/applicant-tracker-react
 
 ### Summary
 
@@ -20,7 +22,7 @@ This app is a MVP version of HR tool, which allows HR or recruiting company to t
 * As an admin user, I want to update the status of the applications (i.e., submitted, interview scheduled, in review, rejected, offer)
 * As a non-admin user, I am allowed to update or delete my posts only. 
 
-### Technology Used
+<!-- ### Technology Used
 * HTML/CSS/JavaScript/jQuery
 * Node.js/Express
 * MongoDB/Gongoose
@@ -36,4 +38,4 @@ This app is a MVP version of HR tool, which allows HR or recruiting company to t
 </br><img width=600 border=1 src='https://anthonyphoto.github.io/Applicant-Tracker/public/img/shot3.jpg'>
 </br></br></br>
 ### Sample Screenshot (Mobile View - iPhone XR)
-</br><img width=400 src='https://anthonyphoto.github.io/Applicant-Tracker/public/img/mobile1.jpg'>
+</br><img width=400 src='https://anthonyphoto.github.io/Applicant-Tracker/public/img/mobile1.jpg'> -->
